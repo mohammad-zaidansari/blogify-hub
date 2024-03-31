@@ -14,18 +14,15 @@ app.use(methodOverride('_method'));
 app.set("view engine", "ejs");
 
 
-const username = process.env.MONGODB_USERNAME;
-const password = process.env.MONGODB_PASSWORD
+const dbUrl = process.env.ATLASDB_URL;
+main()
+.then(() => {
+  console.log("Connect to Database");
+}).catch((err) => console.log(err));
 
-const connectDB = async () => {
-    try{
-        await mongoose.connect(`mongodb+srv://${username}:${password}@blogifyhub.rjugz7a.mongodb.net/?retryWrites=true&w=majority&appName=blogifyHub`);
-        console.log("Connect to MongoDB successfully");
-    }catch (error) {
-        console.log("Connection failed" + error.message);
-    }
-}
-connectDB();   //start DB 
+async function main() {
+  await mongoose.connect(dbUrl);
+};
 
 
 app.get("/", async(req, res) => {
