@@ -4,8 +4,8 @@ Blogify Hub is a web application for creating, editing, and managing blogs. It's
 
 ## Deployment 
 
+#### You can visit the deployed site at [Blogif-hub](https://blogify-hub-eocs.onrender.com).
 This website is deployed using [Render.com](https://render.com/).
-You can visit the deployed site at [Blogif-hub](https://blogify-hub-eocs.onrender.com).
 
 ## Features
 
