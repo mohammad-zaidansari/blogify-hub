@@ -28,7 +28,7 @@
             </div>
             <a href="/articles/<%= article.id %>" class="btn btn-primary">Read More</a> 
             <form action="/articles/<%= article.id %>?_method=PUT" method="POST" class="d-inline">
-              <button type="submit" class="btn btn-info">Edit</button>
+              <a href="/articles/edit/<%= article.id %>" class="btn btn-info">Edit</a>
             </form>
             <form method="POST" action="/articles/<%= article.id %>?_method=DELETE" class="d-inline">
             <button type="submit" class="btn btn-danger">Delete</button>
